@@ -1,0 +1,54 @@
+.switch {
+	display: inline-block;
+	height: 20px;
+	position: relative;
+	width: 40px;
+	margin-bottom: 0;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.switchBg {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	position: absolute;
+	-webkit-transition: background-color .2s;
+	-moz-transition: background-color .2s;
+	transition: background-color .2s;
+	border-radius: 34px;
+}
+
+.switchInput {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+.switchHandle {
+	background-color: #fff;
+	bottom: 2px;
+	height: 16px;
+	left: 2px;
+	position: absolute;
+	width: 16px;
+	border-radius: 50%;
+	transform: translateX(0);
+	outline: none;
+}
+
+.handleOutline {
+	box-shadow: #ffffff 0px 0px 2px 3px;
+}
+
+.switchHandle.isChecked {
+	transform: translateX(20px);
+}
+
+

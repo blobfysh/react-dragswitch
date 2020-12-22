@@ -8,6 +8,10 @@
 
 ```bash
 npm install --save react-dragswitch
+
+or
+
+yarn add react-dragswitch
 ```
 
 ## Usage
@@ -15,12 +19,19 @@ npm install --save react-dragswitch
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-dragswitch'
+import { DragSwitch } from 'react-dragswitch'
 import 'react-dragswitch/dist/index.css'
 
-class Example extends Component {
+class Example extends React.Component {
   render() {
-    return <MyComponent />
+    return (
+      <DragSwitch
+        checked={this.state.checked}
+        onChange={c => {
+          this.setState({ checked: c })
+        }}
+      />
+    )
   }
 }
 ```
