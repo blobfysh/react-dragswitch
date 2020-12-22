@@ -44,13 +44,13 @@ import { DragSwitch } from 'react-dragswitch'
 import 'react-dragswitch/dist/index.css'
 
 const Example = () => {
-	const [checked, setChecked] = useState(false)
+  const [checked, setChecked] = useState(false)
 
-	return (
-		<DragSwitch checked={checked} onChange={(e) => {
-			setChecked(e)
-		}/>
-	)
+  return (
+    <DragSwitch checked={checked} onChange={(e) => {
+      setChecked(e)
+    }/>
+  )
 }
 
 ```
