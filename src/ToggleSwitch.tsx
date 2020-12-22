@@ -8,6 +8,7 @@ interface Props {
 	onChange: (checked: boolean) => void
 	onColor?: string
 	offColor?: string
+	handleColor?: string
 	focusShadow?: string
 	disabled?: boolean
 	[props: string]: any
@@ -19,6 +20,7 @@ const ToggleSwitch = ({
 	onChange,
 	onColor,
 	offColor,
+	handleColor,
 	focusShadow,
 	disabled,
 	...labelProps
@@ -88,7 +90,8 @@ const ToggleSwitch = ({
 					transition: 'transform .2s',
 					boxShadow: hasOutline
 						? focusShadow || 'rgba(0,0,0,0.5) 0px 0px 2px 3px'
-						: undefined
+						: undefined,
+					backgroundColor: handleColor || '#ffffff'
 				}}
 			/>
 			<input

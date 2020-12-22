@@ -32,7 +32,6 @@
 }
 
 .switchHandle {
-	background-color: #fff;
 	bottom: 2px;
 	height: 16px;
 	left: 2px;
@@ -41,10 +40,6 @@
 	border-radius: 50%;
 	transform: translateX(0);
 	outline: none;
-}
-
-.handleOutline {
-	box-shadow: #ffffff 0px 0px 2px 3px;
 }
 
 .switchHandle.isChecked {
