@@ -20,6 +20,7 @@ const App = () => {
 			</label>
 <pre>{
 `import { ToggleSwitch } from 'react-dragswitch'
+import 'react-dragswitch/dist/index.css'
 
 ...
 <label>
@@ -56,10 +57,10 @@ const App = () => {
 }}/>
 ...`}
 </pre>
-			<h3>Draggable switch with label</h3>
+			<h3>Colored draggable switch with label</h3>
 			<label>
 				<span className='mr-1'>Click me!</span>
-				<DragSwitch checked={secondDragChecked} onChange={(e) => {
+				<DragSwitch offColor='rgb(200,0,0)' checked={secondDragChecked} onChange={(e) => {
 					setSecondDragChecked(e)
 				}}/>
 			</label>
@@ -69,7 +70,7 @@ const App = () => {
 ...
 <label>
     <span>Click me!</span>
-    <DragSwitch checked={dragChecked} onChange={(e) => {
+    <DragSwitch offColor='rgb(200,0,0)' checked={dragChecked} onChange={(e) => {
         setDragChecked(e)
     }}/>
 </label>

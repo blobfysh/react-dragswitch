@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { hexToRGB, RGBtoHex } from './utils'
 import styles from './ToggleSwitch.module.css'
 
 interface Props {
@@ -32,28 +31,6 @@ const ToggleSwitch = ({
 		onChange(!checked)
 	}
 
-	const desaturateColor = (hex: string) => {
-		const rgb = hexToRGB(hex)
-		const gray = rgb.r * 0.299 + rgb.g * 0.587 + rgb.b * 0.114
-		const saturation = 0.4
-
-		rgb.r = Math.round(rgb.r * saturation + gray * (1 - saturation))
-		rgb.g = Math.round(rgb.g * saturation + gray * (1 - saturation))
-		rgb.b = Math.round(rgb.b * saturation + gray * (1 - saturation))
-
-		return RGBtoHex(rgb.r, rgb.g, rgb.b)
-	}
-
-	const getBackgroundColor = () => {
-		if (disabled) {
-			return checked
-				? desaturateColor(onColor || '#66bb6a')
-				: desaturateColor(offColor || '#cccccc')
-		}
-
-		return checked ? onColor || '#66bb6a' : offColor || '#cccccc'
-	}
-
 	const onMouseUp = () => {
 		setMouseUpTime(Date.now())
 	}
@@ -78,7 +55,9 @@ const ToggleSwitch = ({
 			<div
 				className={`${styles.switchBg} ${checked ? styles.isChecked : ''}`}
 				style={{
-					backgroundColor: getBackgroundColor()
+					backgroundColor: checked
+						? onColor || '#66bb6a'
+						: offColor || '#cccccc'
 				}}
 			/>
 			<div
