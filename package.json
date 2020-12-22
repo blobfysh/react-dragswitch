@@ -57,6 +57,14 @@
     "react-scripts": "^3.4.1",
     "typescript": "^3.7.5"
   },
+  "keywords": [
+    "react",
+    "switch",
+    "toggle",
+    "draggable",
+    "dragswitch",
+    "react-component"
+  ],
   "files": [
     "dist"
   ]
