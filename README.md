@@ -16,7 +16,7 @@ yarn add react-dragswitch
 
 ## Usage
 
-```tsx
+```jsx
 import React, { Component } from 'react'
 
 import { DragSwitch } from 'react-dragswitch'
@@ -35,6 +35,40 @@ class Example extends React.Component {
   }
 }
 ```
+
+Functional Component
+```jsx
+import React, { useState } from 'react'
+
+import { DragSwitch } from 'react-dragswitch'
+import 'react-dragswitch/dist/index.css'
+
+const Example = () => {
+	const [checked, setChecked] = useState(false)
+
+	return (
+		<DragSwitch checked={checked} onChange={(e) => {
+			setChecked(e)
+		}/>
+	)
+}
+
+```
+
+## Props
+
+`<DragSwitch />`, `<ToggleSwitch />`
+
+| Prop                      | Type                    | Default                           | Required | Description                                                         |
+| ------------------------- | ----------------------- | --------------------------------- | -------- | ------------------------------------------------------------------- |
+| checked                   | boolean                 |                                   | true     | Whether switch should be checked                                    |
+| onChange                  | function                |                                   | true     | Callback for when the switch is checked, use this to set your state |
+| className                 | string                  | null                              | false    | Optional class for applying your own styles to the switch           |
+| onColor                   | string                  | '#66bb6a'                         | false    | Background color when switch is checked                             |
+| offColor                  | string                  | '#cccccc'                         | false    | Background color when switch is not checked                         |
+| handleColor               | string                  | '#ffffff'                         | false    | Color of the handle                                                 |
+| focusShadow               | string                  | 'rgba(0,0,0,0.5) 0px 0px 2px 3px' | false    | Box shadow of handle when switch is focused                         |
+| disabled                  | boolean                 | false                             | false    | Whether the switch is disabled                                      |
 
 ## License
 
