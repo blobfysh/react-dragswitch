@@ -4,6 +4,10 @@
 
 [![NPM](https://img.shields.io/npm/v/react-dragswitch.svg)](https://www.npmjs.com/package/react-dragswitch) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Demo
+
+https://blobfysh.github.io/react-dragswitch/
+
 ## Install
 
 ```bash
